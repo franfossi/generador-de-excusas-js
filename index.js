@@ -10,25 +10,17 @@ window.onload = () => {
     
     // seleccionar aleatoriamente elementos de cada arreglo
 
-        var numberwho = Math.floor(10*Math.random());
-        var numberwhat = Math.floor(10*Math.random());
-        var numberwhen = Math.floor(10*Math.random());
+        var numberWho = Math.floor(who.length*Math.random());
+        var numberWhat = Math.floor(what.length*Math.random());
+        var numberWhen = Math.floor(when.length*Math.random());
 
     // asegurarse de que el número aleatorio sea menor o igual a la cantidad de elemento en cada arreglo
         
-        while (numberwho > who.length - 1) {
-            numberwho = Math.floor(10*Math.random());
-        }
-        while (numberwhat > what.length - 1) {
-            numberwhat = Math.floor(10*Math.random());
-        }
-        while (numberwhen > when.length - 1) {
-            numberwhen = Math.floor(10*Math.random());
-        }
-
+     
     // concatenar las partes de la excusa
 
-        let newexcuse = who[numberwho] + " " + what[numberwhat] + " " + "la tarea " + when[numberwhen];
+  
+        var newexcuse = `${who[numberWho]} ${what[numberWhat]} la tarea ${when[numberWhen]}.`;
 
     // cambiar el contenido del h1 con id excuse para incorporar la excusa creada
         
